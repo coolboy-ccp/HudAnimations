@@ -12,6 +12,10 @@
 		004C894C20720DF500C0BF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004C894A20720DF500C0BF71 /* Main.storyboard */; };
 		004C894E20720DF600C0BF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004C894D20720DF600C0BF71 /* Assets.xcassets */; };
 		004C895120720DF600C0BF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004C894F20720DF600C0BF71 /* LaunchScreen.storyboard */; };
+		004C895A20720FC300C0BF71 /* CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C895920720FC300C0BF71 /* CircleStrokeSpin.swift */; };
+		004C895C20720FF300C0BF71 /* CCPHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C895B20720FF300C0BF71 /* CCPHud.swift */; };
+		004C895E20721D9400C0BF71 /* LayerShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C895D20721D9400C0BF71 /* LayerShapes.swift */; };
+		004C896020722CFC00C0BF71 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C895F20722CFC00C0BF71 /* AnimationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		004C894D20720DF600C0BF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		004C895020720DF600C0BF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		004C895220720DF600C0BF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		004C895920720FC300C0BF71 /* CircleStrokeSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStrokeSpin.swift; sourceTree = "<group>"; };
+		004C895B20720FF300C0BF71 /* CCPHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCPHud.swift; sourceTree = "<group>"; };
+		004C895D20721D9400C0BF71 /* LayerShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerShapes.swift; sourceTree = "<group>"; };
+		004C895F20722CFC00C0BF71 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		004C894520720DF500C0BF71 /* HudAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				004C895820720E0300C0BF71 /* Animations */,
 				004C894620720DF500C0BF71 /* AppDelegate.swift */,
 				004C894820720DF500C0BF71 /* ViewController.swift */,
 				004C894A20720DF500C0BF71 /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				004C895220720DF600C0BF71 /* Info.plist */,
 			);
 			path = HudAnimations;
+			sourceTree = "<group>";
+		};
+		004C895820720E0300C0BF71 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				004C895920720FC300C0BF71 /* CircleStrokeSpin.swift */,
+				004C895D20721D9400C0BF71 /* LayerShapes.swift */,
+				004C895F20722CFC00C0BF71 /* AnimationType.swift */,
+				004C895B20720FF300C0BF71 /* CCPHud.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				004C894920720DF500C0BF71 /* ViewController.swift in Sources */,
+				004C895E20721D9400C0BF71 /* LayerShapes.swift in Sources */,
+				004C896020722CFC00C0BF71 /* AnimationType.swift in Sources */,
+				004C895A20720FC300C0BF71 /* CircleStrokeSpin.swift in Sources */,
+				004C895C20720FF300C0BF71 /* CCPHud.swift in Sources */,
 				004C894720720DF500C0BF71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
