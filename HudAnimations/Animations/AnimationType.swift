@@ -8,6 +8,10 @@
 
 import UIKit
 
+class NoneAnimation: AnimationDelegate {
+    func create(in layer: CALayer, size: CGSize, color: UIColor) {}
+}
+
 protocol AnimationDelegate {
     func create(in layer: CALayer, size: CGSize, color: UIColor)
 }
@@ -16,6 +20,7 @@ public enum CCPHudType: Int {
     case first //用于标记枚举的开始
     
     case circleStrokeSpin
+    case ballPulse
     
     case last //用于标记枚举的结束
     
@@ -24,13 +29,14 @@ public enum CCPHudType: Int {
 
 
 extension CCPHudType {
-    func animation() -> AnimationDelegate? {
+    func animation() -> AnimationDelegate {
         switch self {
         case .circleStrokeSpin:
             return CircleStrokeSpin()
-        case .first, .last:
-            assert(true, "first or last 只是标记，不代表任何类型")
-            return nil
+        case .ballPulse:
+            return BallPulse()
+        default:
+            return NoneAnimation()
         }
     }
 }

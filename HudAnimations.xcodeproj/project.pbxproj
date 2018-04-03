@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0014F40820731061000C0B5C /* BallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F40720731061000C0B5C /* BallPulse.swift */; };
+		0014F40A20731CC4000C0B5C /* BallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F40920731CC4000C0B5C /* BallGridPulse.swift */; };
 		004C894720720DF500C0BF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C894620720DF500C0BF71 /* AppDelegate.swift */; };
 		004C894920720DF500C0BF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C894820720DF500C0BF71 /* ViewController.swift */; };
 		004C894C20720DF500C0BF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004C894A20720DF500C0BF71 /* Main.storyboard */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0014F40720731061000C0B5C /* BallPulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallPulse.swift; sourceTree = "<group>"; };
+		0014F40920731CC4000C0B5C /* BallGridPulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallGridPulse.swift; sourceTree = "<group>"; };
+		0014F40F20734B47000C0B5C /* HudAnimations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HudAnimations-Bridging-Header.h"; sourceTree = "<group>"; };
 		004C894320720DF500C0BF71 /* HudAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HudAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		004C894620720DF500C0BF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		004C894820720DF500C0BF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 				004C894D20720DF600C0BF71 /* Assets.xcassets */,
 				004C894F20720DF600C0BF71 /* LaunchScreen.storyboard */,
 				004C895220720DF600C0BF71 /* Info.plist */,
+				0014F40F20734B47000C0B5C /* HudAnimations-Bridging-Header.h */,
 			);
 			path = HudAnimations;
 			sourceTree = "<group>";
@@ -77,9 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				004C895920720FC300C0BF71 /* CircleStrokeSpin.swift */,
+				0014F40720731061000C0B5C /* BallPulse.swift */,
 				004C895D20721D9400C0BF71 /* LayerShapes.swift */,
 				004C895F20722CFC00C0BF71 /* AnimationType.swift */,
 				004C895B20720FF300C0BF71 /* CCPHud.swift */,
+				0014F40920731CC4000C0B5C /* BallGridPulse.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -116,6 +124,7 @@
 				TargetAttributes = {
 					004C894220720DF500C0BF71 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -155,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014F40A20731CC4000C0B5C /* BallGridPulse.swift in Sources */,
 				004C894920720DF500C0BF71 /* ViewController.swift in Sources */,
 				004C895E20721D9400C0BF71 /* LayerShapes.swift in Sources */,
 				004C896020722CFC00C0BF71 /* AnimationType.swift in Sources */,
+				0014F40820731061000C0B5C /* BallPulse.swift in Sources */,
 				004C895A20720FC300C0BF71 /* CircleStrokeSpin.swift in Sources */,
 				004C895C20720FF300C0BF71 /* CCPHud.swift in Sources */,
 				004C894720720DF500C0BF71 /* AppDelegate.swift in Sources */,
@@ -304,14 +315,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6QCEN324A;
 				INFOPLIST_FILE = HudAnimations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ccp.HudAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HudAnimations/HudAnimations-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,14 +337,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6QCEN324A;
 				INFOPLIST_FILE = HudAnimations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ccp.HudAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HudAnimations/HudAnimations-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

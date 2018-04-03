@@ -63,9 +63,7 @@ public final class CCPHud: UIView {
     }
     
     private final func  animationSet() {
-        guard let animation = type.animation() else {
-            return
-        }
+        let animation = type.animation()
         var animationRect = UIEdgeInsetsInsetRect(frame, UIEdgeInsetsMake(padding, padding, padding, padding))
         let minEdg = min(animationRect.width, animationRect.height)
         layer.sublayers = nil

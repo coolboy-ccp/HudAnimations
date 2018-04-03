@@ -15,22 +15,22 @@ final class CircleStrokeSpin:  AnimationDelegate{
         let strokeStartTimer: CFTimeInterval = 1.2
         let strokeEndDuration: CFTimeInterval = 0.7
         
-        let rotation = CABasicAnimation.init(keyPath: "transform.rotation")
+        let rotation = CABasicAnimation(keyPath: "transform.rotation")
         rotation.byValue = Float.pi * 2
-        rotation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear)
+        rotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
-        let strokeEnd = CABasicAnimation.init(keyPath: "strokeEnd")
+        let strokeEnd = CABasicAnimation(keyPath: "strokeEnd")
         strokeEnd.duration = strokeEndDuration
-        strokeEnd.timingFunction = CAMediaTimingFunction.init(controlPoints: 0.4, 0.0, 0.2, 1.0)
+        strokeEnd.timingFunction = CAMediaTimingFunction(controlPoints: 0.4, 0.0, 0.2, 1.0)
         strokeEnd.fromValue = 0
         strokeEnd.toValue = 1
         
-        let strokeStart = CABasicAnimation.init(keyPath: "strokeStart")
+        let strokeStart = CABasicAnimation(keyPath: "strokeStart")
         strokeStart.duration = strokeStartTimer
         strokeStart.fromValue = 0
         strokeStart.toValue = 1.0
         strokeStart.beginTime = beginTimer
-        strokeStart.timingFunction = CAMediaTimingFunction.init(controlPoints: 0.4, 0.0, 0.2, 1.0)
+        strokeStart.timingFunction = CAMediaTimingFunction(controlPoints: 0.4, 0.0, 0.2, 1.0)
         
         let group = CAAnimationGroup()
         group.animations = [rotation, strokeStart, strokeEnd]
