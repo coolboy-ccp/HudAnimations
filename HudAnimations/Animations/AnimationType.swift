@@ -21,6 +21,9 @@ public enum CCPHudType: Int {
     
     case circleStrokeSpin
     case ballPulse
+    case ballGridPluse
+    case ballClipRotate
+    case squareSpin
     
     case last //用于标记枚举的结束
     
@@ -35,6 +38,12 @@ extension CCPHudType {
             return CircleStrokeSpin()
         case .ballPulse:
             return BallPulse()
+        case .ballGridPluse:
+            return BallGridPulse()
+        case .ballClipRotate:
+            return BallClipRotate()
+        case .squareSpin:
+            return SquareSpin()
         default:
             return NoneAnimation()
         }

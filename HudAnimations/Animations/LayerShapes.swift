@@ -10,9 +10,12 @@ import UIKit
 
 
 enum AnimationShape {
+    case none
     case circle
     case circleSemi
     case stroke
+    case ringThirdFour
+    case rectangle
 }
 
 extension AnimationShape {
@@ -38,6 +41,23 @@ extension AnimationShape {
             layer.fillColor = nil
             layer.strokeColor = cl.cgColor
             layer.lineWidth = 2
+        case .ringThirdFour:
+            path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
+                        radius: size.width / 2,
+                        startAngle: -3 * CGFloat.pi / 4,
+                        endAngle: -CGFloat.pi / 4,
+                        clockwise: false)
+            layer.fillColor = nil
+            layer.strokeColor = cl.cgColor
+            layer.lineWidth = 2
+        case .rectangle:
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: size.width, y: 0))
+            path.addLine(to: CGPoint(x: size.width, y: size.height))
+            path.addLine(to: CGPoint(x: 0, y: size.height))
+            layer.fillColor = cl.cgColor
+        default:
+            break
         }
         layer.path = path.cgPath
         return layer
